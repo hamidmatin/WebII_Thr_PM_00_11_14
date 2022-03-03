@@ -1,0 +1,30 @@
+// SCSS comment (do not insert in css file)
+
+/* CSS comment (insert in css file ) */
+
+// set border box for all elements
+* {
+  box-sizing: border-box;
+}
+
+// init body
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+// 1- sass path/input.scss path/output.css
+// sample => sass sass-course\scss\scss_intro.scss sass-course\css\scss_intro.css
+
+// 2- sass path/input.scss path/output.css -w or --watch
+// sample => sass sass-course\scss\scss_intro.scss sass-course\css\scss_intro.css -w
+
+// 3- sass input_path:output_path
+// sample => >sass sass-course\scss:sass-course\css
+
+// 4- sass input_path:output_path -w or --watch
+// sample => >sass sass-course\scss:sass-course\css -w
