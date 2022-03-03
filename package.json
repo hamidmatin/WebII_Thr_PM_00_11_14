@@ -1,0 +1,25 @@
+{
+  "name": "webii_thr_pm_00_11_14",
+  "version": "1.0.0",
+  "description": "مدرس دوره های برنامه نویسی سی شارپ و فرانت اند",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hamidmatin/WebII_Thr_PM_00_11_14.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hamidmatin/WebII_Thr_PM_00_11_14/issues"
+  },
+  "homepage": "https://github.com/hamidmatin/WebII_Thr_PM_00_11_14#readme",
+  "dependencies": {
+    "bootstrap": "^5.1.3"
+  }
+}

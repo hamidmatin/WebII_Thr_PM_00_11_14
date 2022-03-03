@@ -1,0 +1,89 @@
+/*********** Mixins ********/
+@mixin rounded($radius) {
+  border-radius: $radius;
+}
+
+.class1 {
+  padding: 8px;
+  @include rounded(4px);
+}
+
+.class2 {
+  color: black;
+  @include rounded(50%);
+}
+
+// default value
+@mixin mixin1($padding: 0.5em, $color: $blue) {
+  padding: $padding;
+  color: $color;
+}
+
+.class3 {
+  font-size: 18px;
+  @include mixin1();
+}
+
+.class4 {
+  background-color: yellow;
+  @include mixin1(30px, rgb(14, 153, 56));
+}
+
+.class5 {
+  background-color: rgb(238, 105, 227);
+  @include mixin1(20px);
+}
+
+.class6 {
+  background-color: rgb(238, 105, 227);
+  @include mixin1($color: red);
+}
+
+.class7 {
+  background-color: rgb(238, 105, 227);
+  @include mixin1($color: red, $padding: 30px);
+}
+
+/******** sample ***/
+
+@mixin button-color($bg-color: #ccc, $color: black) {
+  background-color: $bg-color;
+  color: $color;
+
+  &:hover {
+    background-color: darken($color: $bg-color, $amount: 10%);
+    box-shadow: 0 0 2px 2px adjust-color($color: $bg-color, $alpha: -0.3);
+  }
+
+  &:active {
+    @extend %btn-active;
+  }
+}
+%btn-active {
+  box-shadow: none !important;
+  transform: translate(-2px, -2px) !important;
+}
+
+.btn {
+  text-decoration: none;
+  display: inline-block;
+  border: none;
+  padding: 0.5em 1em;
+  transition: all 0.1s;
+  cursor: pointer;
+  font-size: 16px;
+  
+  @include rounded(4px);
+
+  &.btn-primary {
+    @include button-color($bg-color: $primary, $color: white);
+  }
+
+  &.btn-danger {
+    @include button-color($bg-color: red, $color: white);
+  }
+
+  &.btn-warning {
+    @include button-color(rgb(231, 210, 20), white);
+  }
+}

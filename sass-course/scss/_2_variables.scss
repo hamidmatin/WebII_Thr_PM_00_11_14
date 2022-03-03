@@ -1,0 +1,47 @@
+/***** Variables *****/
+
+// Global variable
+$base-font-size: 16px;
+$base-font-family: Arial, Helvetica, sans-serif;
+$red: #ca1d1d;
+$blue: #45a4f3;
+$dark: #353535;
+$light: #f1f1f1;
+
+
+$primary: $blue;
+$secondary: #3f3d3d;
+
+body{
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  color: $dark;
+  background-color: $light;
+  margin: 0;
+}
+
+h1{
+  font-size: $base-font-size * 4;
+}
+
+h2{ 
+  font-size: $base-font-size * 3.5;
+}
+
+h3{ 
+  font-size: $base-font-size * 3;
+}
+
+h4{
+  // local variable
+  $h4-font-size: $base-font-size * 2; 
+  font-size: $h4-font-size;
+  margin-top: 0;
+  margin-bottom: $h4-font-size / 3;
+}
+.test-blue{
+  color: $blue;
+}
+.test-primary{
+  color: $primary;
+}

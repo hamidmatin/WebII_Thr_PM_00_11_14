@@ -1,0 +1,111 @@
+// /******* Nesting **********/
+/*
+  decendant selector
+  selector1{
+    selector2{
+                        
+    }
+  }
+  
+  child selector
+  selector1{
+    > selector2{
+                        
+    }
+  }
+
+  sibling selector
+  selector1{
+    + selector2{
+                        
+    }
+  }
+  sibling selector
+  selector1{
+    ~ selector2{
+                        
+    }
+  }
+
+  parent selector &
+
+  selector1{
+    &:hover{
+    }
+
+    & + &{
+                        
+    }
+  }
+*/
+
+$nav-height: 50px;
+.nav {
+  height: $nav-height;
+  background-color: $dark;
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    a {
+      display: block;
+      text-decoration: none;
+      color: $light;
+      background-color: $dark;
+      line-height: $nav-height;
+      padding: 0 16px;
+      outline: none;
+
+      &:hover,
+      &:focus {
+        background-color: $red;
+        color: $light;
+      }
+    }
+  }
+
+  > ul {
+    > li {
+      float: left;
+    }
+  }
+}
+
+h2 {
+  + p {
+    border-top: 1px solid gray;
+  }
+}
+
+// p {
+//   ~ span {
+//     opacity: 0.8;
+//   }
+
+//   ~ a {
+//     color: gainsboro;
+//   }
+// }
+
+/************/
+p {
+  ~ {
+    span {
+      opacity: 0.8;
+    }
+
+    a {
+      color: rgb(85, 85, 85);
+    }
+  }
+}
+
+.card-link {
+  background-color: #fff;
+
+  & + & {
+    margin-left: 10px;
+  }
+}

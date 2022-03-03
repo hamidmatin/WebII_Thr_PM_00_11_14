@@ -1,0 +1,58 @@
+/********** Color Functions *******/
+$my-color: rgba(50, 189, 113, 0.8);
+
+.my-color {
+  color: $my-color;
+}
+.my-color-1 {
+  color: adjust-color($my-color, $blue: 10);
+}
+.my-color-2 {
+  color: adjust-color($my-color, $blue: -10);
+}
+.my-color-3 {
+  color: adjust-color($my-color, $blue: -10, $red: 20);
+}
+.my-color-4 {
+  color: adjust-color($my-color, $blue: -120, $red: 220);
+}
+.my-color-5 {
+  color: adjust-color($my-color, $blue: -10, $red: 20, $alpha: -0.4);
+}
+.my-color-6 {
+  color: adjust-color($my-color, $hue: 20, $saturation: -20%);
+}
+.my-color-7 {
+  color: adjust-color($my-color, $lightness: -20%);
+}
+.my-color-8 {
+  color: adjust-hue($my-color, -20deg);
+}
+.my-color-9 {
+  color: change-color($my-color, $blue: 30, $green: 100);
+}
+.my-color-10 {
+  color: scale-color($my-color, $blue: 10%);
+}
+.my-color-11 {
+  color: scale-color($my-color, $red: -10%);
+}
+.my-color-12 {
+  color: lighten($color: $my-color, $amount: 30%);
+}
+.my-color-13 {
+  color: darken($color: $my-color, $amount: 30%);
+}
+
+/* Sample */
+.btn-primary {
+  display: inline-block;
+  padding: 8px 16px;
+  text-decoration: none;
+  color: $light;
+  background-color: $primary;
+
+  &:hover {
+    background-color: darken($color: $primary, $amount: 15%);
+  }
+}
