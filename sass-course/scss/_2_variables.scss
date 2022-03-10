@@ -1,4 +1,5 @@
 /***** Variables *****/
+// @use "sass:math";
 
 // Global variable
 $base-font-size: 16px;
@@ -38,6 +39,7 @@ h4{
   font-size: $h4-font-size;
   margin-top: 0;
   margin-bottom: $h4-font-size / 3;
+  // margin-bottom: math.div($h4-font-size, 3);
 }
 .test-blue{
   color: $blue;

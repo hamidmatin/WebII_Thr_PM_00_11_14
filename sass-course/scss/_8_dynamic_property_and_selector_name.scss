@@ -1,0 +1,85 @@
+/********  Dynamic Property adn selector name *********/
+
+$size: 20px;
+
+.test1 {
+  padding: $size;
+}
+
+//******** #{$variable} *********
+// $property: padding;
+// $property: padding-top;
+// $property: margin-top;
+$property: width;
+.test2 {
+  #{$property}: $size;
+}
+
+// $selector: '.my-class2';
+// $selector: header;
+$selector: '#footer';
+
+#{$selector} {
+  #{$property}: $size;
+}
+
+@mixin class-mixn($color: red, $font-size: 16px) {
+  .my-class {
+    color:$color;
+    font-size: $font-size;
+  }
+}
+
+@include class-mixn(yellow, 20px);
+
+.parent {
+  background-color: lightgreen;
+
+  @include class-mixn(darkgreen, 18px);
+}
+
+@mixin alert($name, $color){
+  .alert-#{$name}{
+    background-color: lighten($color: $color, $amount: 20%);
+    color: $color;
+    border: 1px solid $color;
+    padding: 1em;
+  }
+}
+
+
+@include alert(primary, $primary);
+@include alert(secondary, $dark);
+@include alert(custom, #40d440 );
+
+$start: 0;
+$middle: 50%;
+$end: 100%;
+
+@mixin position-value($property, $position, $value) {
+  .#{$property}-#{$position}{
+    #{$property} : $value !important;
+  }
+}
+
+@include position-value(top, 0, $start);
+@include position-value(top, 50, $middle);
+@include position-value(top, 100, $end);
+
+@include position-value(left, 0, $start);
+@include position-value(left, 50, $middle);
+@include position-value(left, 100, $end);
+
+@include position-value(bottom, 0, $start);
+@include position-value(bottom, 50, $middle);
+@include position-value(bottom, 100, $end);
+
+$iamge-file-path: 'images';
+
+.test {
+  background-image: url('assets/' + $iamge-file-path + '/image.png');
+}
+
+.test2 {
+  background-image: url('assets/#{$iamge-file-path}/image.png');
+}

@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAUA,AAAA,SAAS,CAAA;EACP,gBAAgB,EAAE,IAAI;CACvB",
+    "sources": [
+        "../scss/bootstrap-theme-1.scss",
+        "../scss/_my-variables-1.scss"
+    ],
+    "names": [],
+    "file": "bootstrap-theme-1.css"
+}

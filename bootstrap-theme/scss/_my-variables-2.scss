@@ -1,0 +1,32 @@
+$primary: rgb(247, 33, 219);
+$light: rgb(247, 202, 202);
+
+$enable-rounded: false;
+$enable-smooth-scroll: false;
+
+$spacer: 10px;
+$spacers: (
+  0: 0,
+  1: $spacer * 1,
+  2: $spacer * 1.5,
+  3: $spacer * 2,
+  4: $spacer * 2.5,
+  5: $spacer * 3,
+  6: $spacer * 3.5,
+  7: $spacer * 4,
+  8: $spacer * 4.5,
+  9: $spacer * 5,
+  10: $spacer * 6,
+);
+
+$alert-padding-y: 30px;
+$alert-padding-x: 30px;
+
+$alert-bg-scale: -50%;
+$alert-border-scale: -20%;
+
+$card-spacer-y: $spacer * 3;
+$card-spacer-x: $spacer * 3;
+$card-title-spacer-y: $spacer * 3 * 0.5;
+
+$transition-collapse: height 2.35s cubic-bezier(0.8, -0.96, 0.32, 1.72);
